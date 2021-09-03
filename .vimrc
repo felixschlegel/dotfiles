@@ -59,6 +59,10 @@ hi SignColumn guibg=none
 hi SignColumn ctermbg=none
 hi SignatureMarkText ctermbg=none
 
+" Show files in buffer in top airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
 " vim-gitgutter colors
 let g:gitgutter_override_sign_column_highlight = 0
 highlight clear SignColumn
@@ -74,6 +78,7 @@ let g:fzf_action = {
 
 " custom key mappings
 nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 nnoremap <C-p> :Files<CR>
 nnoremap <C-h> :tabprev<CR>
 nnoremap <C-l> :tabn<CR>
