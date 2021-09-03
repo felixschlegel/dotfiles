@@ -80,8 +80,9 @@ let g:fzf_action = {
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 nnoremap <C-p> :Files<CR>
-nnoremap <C-h> :tabprev<CR>
-nnoremap <C-l> :tabn<CR>
+nnoremap <C-h> :bprev<CR>
+nnoremap <C-l> :bn<CR>
+nnoremap <C-q> :bd<CR>
 
 " keep cursor centered when searching
 nnoremap n nzzzv
