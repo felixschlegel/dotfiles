@@ -76,6 +76,9 @@ let g:fzf_action = {
     \ 'ctrl-t': 'tab split',
     \ 'ctrl-v': 'vsplit'}
 
+" remove whitespace when saving files
+autocmd BufWritePre * :%s/\s\+$//e
+
 " custom key mappings
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
@@ -83,6 +86,8 @@ nnoremap <C-p> :Files<CR>
 nnoremap <C-h> :bprev<CR>
 nnoremap <C-l> :bn<CR>
 nnoremap <C-q> :bd<CR>
+" ripgrep for in-file searching (needs to be installed: brew install ripgrep)
+nnoremap <C-_> :Rg<CR>
 
 " keep cursor centered when searching
 nnoremap n nzzzv
