@@ -41,7 +41,7 @@ call plug#end()
 
 filetype plugin indent on
 syntax on
-colorscheme industry 
+colorscheme industry
 set number relativenumber " Show relative line numbers
 set nu rnu " necessary for hybrid line numbers
 set tabstop=4  " Change Tab size from 8 to 4
@@ -75,6 +75,9 @@ highlight GitGutterChangeDelete ctermfg=4
 let g:fzf_action = {
     \ 'ctrl-t': 'tab split',
     \ 'ctrl-v': 'vsplit'}
+
+" do not search filenames with ripgrep
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 " remove whitespace when saving files
 autocmd BufWritePre * :%s/\s\+$//e
