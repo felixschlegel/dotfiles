@@ -1,0 +1,4 @@
+# Only add selected config files to GitHub
+/.config/*
+!/.config/fish
+!/.config/karabiner
