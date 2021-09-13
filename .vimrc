@@ -37,6 +37,9 @@ Plug 'junegunn/fzf.vim'
 " vim-fugitive (required to show current git branch in vim-airline)
 Plug 'tpope/vim-fugitive'
 
+" ale linting
+Plug 'dense-analysis/ale'
+
 call plug#end()
 
 filetype plugin indent on
@@ -54,6 +57,10 @@ set visualbell " disable audio bell
 set colorcolumn=120 " vertical column
 highlight ColorColumn ctermbg=238
 
+" NERDTree customizations
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
 " remove grey background from vim-signature marks
 hi SignColumn guibg=none
 hi SignColumn ctermbg=none
@@ -62,6 +69,8 @@ hi SignatureMarkText ctermbg=none
 " Show files in buffer in top airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+" Show ale linting in airline
+let g:airline#extensions#ale#enabled = 1
 
 " vim-gitgutter colors
 let g:gitgutter_override_sign_column_highlight = 0
@@ -81,6 +90,12 @@ command! -bang -nargs=* Rg
     \   call fzf#vim#grep(
     \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
     \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
+
+" ale customizations
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '▲'
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 
 " remove whitespace when saving files
 autocmd BufWritePre * :%s/\s\+$//e
