@@ -118,7 +118,23 @@ nnoremap N Nzzzv
 map <expr> M printf('`%c zz', getchar())
 
 " Disable arrow keys
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+nnoremap  <Left> <nop>
+nnoremap  <Right> <nop>
+nnoremap  <Up> <nop>
+nnoremap  <Down> <nop>
+nnoremap  <PageUp> <nop>
+nnoremap  <PageDown> <nop>
+
+inoremap  <Left> <nop>
+inoremap  <Right> <nop>
+inoremap  <Up> <nop>
+inoremap  <Down> <nop>
+inoremap  <PageUp> <nop>
+inoremap  <PageDown> <nop>
+
+vnoremap  <Left> <nop>
+vnoremap  <Right> <nop>
+vnoremap  <Up> <nop>
+vnoremap  <Down> <nop>
+vnoremap  <PageUp> <nop>
+vnoremap  <PageDown> <nop>
