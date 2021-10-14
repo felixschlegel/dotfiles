@@ -34,6 +34,10 @@ call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" goyo plugin for writing
+" Issue: colorcolumn and gitgutter color overwritten when exiting goyo
+Plug 'junegunn/goyo.vim'
+
 " vim-fugitive (required to show current git branch in vim-airline)
 Plug 'tpope/vim-fugitive'
 
@@ -53,6 +57,7 @@ set expandtab
 set incsearch " Search while typing
 set nofoldenable " disable folding
 set visualbell " disable audio bell
+set linebreak " wrap lines based on words
 
 set colorcolumn=120 " vertical column
 highlight ColorColumn ctermbg=238
@@ -104,6 +109,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 nnoremap <C-p> :Files<CR>
+nnoremap <C-g> :Goyo <CR>
 nnoremap <C-h> :bprev<CR>
 nnoremap <C-l> :bn<CR>
 nnoremap <C-q> :bd<CR>
@@ -113,6 +119,11 @@ nnoremap <C-_> :Rg<CR>
 " keep cursor centered when searching
 nnoremap n nzzzv
 nnoremap N Nzzzv
+
+" keep cursor centered when jumping changelist
+nnoremap g; g;zz
+nnoremap g, g,zz
+nnoremap gi g;zzi
 
 " keep cursor centered when jumping to mark
 map <expr> M printf('`%c zz', getchar())
@@ -138,3 +149,7 @@ vnoremap  <Up> <nop>
 vnoremap  <Down> <nop>
 vnoremap  <PageUp> <nop>
 vnoremap  <PageDown> <nop>
+
+" Move inside of wrapped lines using h, j, k and l
+nnoremap j gj
+nnoremap k gk
