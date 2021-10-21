@@ -44,6 +44,10 @@ Plug 'tpope/vim-fugitive'
 " ale linting
 Plug 'dense-analysis/ale'
 
+" coc autocomplete
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+
 call plug#end()
 
 filetype plugin indent on
@@ -127,6 +131,18 @@ nnoremap gi g;zzi
 
 " keep cursor centered when jumping to mark
 map <expr> M printf('`%c zz', getchar())
+
+" omnicomplete configuration
+" select longest common text
+set completeopt=longest,menuone,noinsert
+" select popup item on enter
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" popup navigation
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+" keep match highlighted while typing
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+    \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 " Disable arrow keys
 nnoremap  <Left> <nop>
