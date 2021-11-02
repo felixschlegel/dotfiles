@@ -106,6 +106,10 @@ let g:ale_sign_warning = '▲'
 highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 
+" coc customizations
+highlight Pmenu ctermbg=233 ctermfg=gray
+highlight PmenuSel ctermbg=darkgray ctermfg=white
+
 " remove whitespace when saving files
 autocmd BufWritePre * :%s/\s\+$//e
 
