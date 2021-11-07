@@ -169,7 +169,3 @@ vnoremap  <Up> <nop>
 vnoremap  <Down> <nop>
 vnoremap  <PageUp> <nop>
 vnoremap  <PageDown> <nop>
-
-" Move inside of wrapped lines using h, j, k and l
-nnoremap j gj
-nnoremap k gk
