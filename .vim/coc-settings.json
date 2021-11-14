@@ -11,5 +11,5 @@
         }
     },
     "coc.preferences.diagnostic.displayByAle": true,
-    "suggest.noselect": true
+    "suggest.noselect": false
 }
