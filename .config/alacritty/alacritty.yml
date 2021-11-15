@@ -810,6 +810,7 @@ key_bindings:
 
   # (macOS only)
   - { key: Back,            mods: Command,                    chars: "\x15"                 }
+  - { key: Slash,           mods: Control,                    chars: "\x1f"                 }
   #- { key: K,              mods: Command, mode: ~Vi|~Search, chars: "\x0c"                 }
   #- { key: K,              mods: Command, mode: ~Vi|~Search, action: ClearHistory          }
   #- { key: Key0,           mods: Command,                    action: ResetFontSize         }
