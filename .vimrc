@@ -48,11 +48,20 @@ Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
+" vim surround
+Plug 'tpope/vim-surround'
+" required to use . for surround actions
+Plug 'tpope/vim-repeat'
+
 call plug#end()
 
 filetype plugin indent on
 syntax on
+
 colorscheme industry
+" transparent background (uses terminal background)
+hi Normal guibg=NONE ctermbg=NONE
+
 set number relativenumber " Show relative line numbers
 set nu rnu " necessary for hybrid line numbers
 set tabstop=4  " Change Tab size from 8 to 4
