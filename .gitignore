@@ -1,3 +1,6 @@
+/.vim/.netrwhist
+/.vim/plugged/*
+/.vim/bundle/*
 # Only add selected config files to GitHub
 /.config/*
 !/.config/karabiner

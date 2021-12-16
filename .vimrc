@@ -148,6 +148,11 @@ inoremap <C-k> <Up>
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
     \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
+" Map :W to :w
+command WQ wq
+command Wq wq
+command W w
+
 " Disable arrow keys
 nnoremap  <Left> <nop>
 nnoremap  <Right> <nop>
