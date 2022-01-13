@@ -52,6 +52,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lock
 Plug 'tpope/vim-surround'
 " required to use . for surround actions
 Plug 'tpope/vim-repeat'
+" comment out lines with ease
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
