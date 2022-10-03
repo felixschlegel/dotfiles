@@ -8,5 +8,5 @@ set -gx OCAML_TOPLEVEL_PATH '/Users/Felix/.opam/default/lib/toplevel';
 set -gx PATH '/Users/Felix/.opam/default/bin' '/usr/local/bin' '/opt/homebrew/bin/' '/usr/bin' '/bin' '/usr/sbin' '/sbin' '/Users/FelixSchlegel/mongodb/bin' '/opt/X11/bin' '/Library/Apple/usr/bin' '/Library/TeX/texbin';
 fish_add_path /opt/homebrew/bin/ruby
 rvm default
-fish_add_path /usr/local/opt/openssl@3/bin
-fish_add_path /usr/local/opt/openssl@3/bin
+fish_add_path /opt/homebrew/opt/openssl@3/bin
+fish_add_path /opt/homebrew/opt/openssl@3/bin
