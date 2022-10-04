@@ -218,7 +218,8 @@
                                         "bundle_identifiers": [
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
-                                            "^io\\.alacritty$"
+                                            "^io\\.alacritty$",
+                                            "company.thebrowser.Browser"
                                         ]
                                     }
                                 ]
@@ -305,7 +306,8 @@
                                         "bundle_identifiers": [
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
-                                            "^io\\.alacritty$"
+                                            "^io\\.alacritty$",
+                                            "company.thebrowser.Browser"
                                         ]
                                     }
                                 ]
