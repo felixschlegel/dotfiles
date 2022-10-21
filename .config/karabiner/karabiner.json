@@ -219,7 +219,8 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^io\\.alacritty$",
-                                            "company.thebrowser.Browser"
+                                            "company.thebrowser.Browser",
+                                            "com.jetbrains.intellij"
                                         ]
                                     }
                                 ]
@@ -307,7 +308,8 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^io\\.alacritty$",
-                                            "company.thebrowser.Browser"
+                                            "company.thebrowser.Browser",
+                                            "com.jetbrains.intellij"
                                         ]
                                     }
                                 ]

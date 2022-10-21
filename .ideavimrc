@@ -1,0 +1,69 @@
+set ideajoin
+
+" emulated Vim plugins
+set NERDTree
+set surround
+set commentary
+
+set number relativenumber " Show relative line numbers
+set nu rnu " necessary for hybrid line numbers
+set tabstop=4  " Change Tab size from 8 to 4
+set shiftwidth=4
+set expandtab
+set incsearch " Search while typing
+set nofoldenable " disable folding
+set visualbell " disable audio bell
+set linebreak " wrap lines based on words
+
+" remove whitespace when saving files
+autocmd BufWritePre * :%s/\s\+$//e
+
+" custom key mappings
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <C-p> :Files<CR>
+nnoremap <C-g> :Goyo <CR>
+nnoremap <C-h> :bprev<CR>
+nnoremap <C-l> :bn<CR>
+nnoremap <C-q> :bd<CR>
+" ripgrep for in-file searching (needs to be installed: brew install ripgrep)
+nnoremap <C-_> :Rg<CR>
+
+" keep cursor centered when searching
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" keep cursor centered when jumping changelist
+nnoremap g; g;zz
+nnoremap g, g,zz
+nnoremap gi g;zzi
+
+" keep cursor centered when jumping to mark
+map <expr> M printf('`%c zz', getchar())
+
+" Map :W to :w
+command WQ wq
+command Wq wq
+command W w
+
+" Disable arrow keys
+nnoremap  <Left> <nop>
+nnoremap  <Right> <nop>
+nnoremap  <Up> <nop>
+nnoremap  <Down> <nop>
+nnoremap  <PageUp> <nop>
+nnoremap  <PageDown> <nop>
+
+inoremap  <Left> <nop>
+inoremap  <Right> <nop>
+inoremap  <Up> <nop>
+inoremap  <Down> <nop>
+inoremap  <PageUp> <nop>
+inoremap  <PageDown> <nop>
+
+vnoremap  <Left> <nop>
+vnoremap  <Right> <nop>
+vnoremap  <Up> <nop>
+vnoremap  <Down> <nop>
+vnoremap  <PageUp> <nop>
+vnoremap  <PageDown> <nop>
