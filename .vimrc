@@ -185,3 +185,7 @@ vnoremap  <Up> <nop>
 vnoremap  <Down> <nop>
 vnoremap  <PageUp> <nop>
 vnoremap  <PageDown> <nop>
+
+" C/C++ indentation
+autocmd FileType c setlocal shiftwidth=2 tabstop=2 cindent
+autocmd FileType cpp setlocal shiftwidth=2 tabstop=2 cindent
