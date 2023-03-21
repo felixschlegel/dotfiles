@@ -124,6 +124,13 @@ highlight PmenuSel ctermbg=darkgray ctermfg=white
 " remove whitespace when saving files
 autocmd BufWritePre * :%s/\s\+$//e
 
+" Use coc jump to definition instead of vim default
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> <C-]> <Plug>(coc-definition)
+nmap <silent> gD <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+" See :help coc-key-mappings@en for more
+
 " custom key mappings
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
@@ -138,11 +145,17 @@ nnoremap <C-_> :Rg<CR>
 " keep cursor centered when searching
 nnoremap n nzzzv
 nnoremap N Nzzzv
+nnoremap * *zz
+nnoremap # #zz
 
 " keep cursor centered when jumping changelist
 nnoremap g; g;zz
 nnoremap g, g,zz
 nnoremap gi g;zzi
+
+" keep cursor centered when jumping jump list
+noremap <C-o> <C-o>zz
+noremap <C-i> <C-i>zz
 
 " keep cursor centered when jumping to mark
 map <expr> M printf('`%c zz', getchar())
