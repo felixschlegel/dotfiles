@@ -66,7 +66,7 @@ hi Normal guibg=NONE ctermbg=NONE
 
 set number relativenumber " Show relative line numbers
 set nu rnu " necessary for hybrid line numbers
-set tabstop=4  " Change Tab size from 8 to 4
+set tabstop=4 " Change Tab size from 8 to 4
 set shiftwidth=4
 set expandtab
 set incsearch " Search while typing
@@ -82,9 +82,9 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
 " remove grey background from vim-signature marks
-hi SignColumn guibg=none
-hi SignColumn ctermbg=none
-hi SignatureMarkText ctermbg=none
+hi SignColumn guibg=NONE
+hi SignColumn ctermbg=NONE
+hi SignatureMarkText ctermbg=NONE
 
 " Show files in buffer in top airline
 let g:airline#extensions#tabline#enabled = 1
@@ -178,26 +178,26 @@ command Wq wq
 command W w
 
 " Disable arrow keys
-nnoremap  <Left> <nop>
-nnoremap  <Right> <nop>
-nnoremap  <Up> <nop>
-nnoremap  <Down> <nop>
-nnoremap  <PageUp> <nop>
-nnoremap  <PageDown> <nop>
+nnoremap <Left> <nop>
+nnoremap <Right> <nop>
+nnoremap <Up> <nop>
+nnoremap <Down> <nop>
+nnoremap <PageUp> <nop>
+nnoremap <PageDown> <nop>
 
-inoremap  <Left> <nop>
-inoremap  <Right> <nop>
-inoremap  <Up> <nop>
-inoremap  <Down> <nop>
-inoremap  <PageUp> <nop>
-inoremap  <PageDown> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <PageUp> <nop>
+inoremap <PageDown> <nop>
 
-vnoremap  <Left> <nop>
-vnoremap  <Right> <nop>
-vnoremap  <Up> <nop>
-vnoremap  <Down> <nop>
-vnoremap  <PageUp> <nop>
-vnoremap  <PageDown> <nop>
+vnoremap <Left> <nop>
+vnoremap <Right> <nop>
+vnoremap <Up> <nop>
+vnoremap <Down> <nop>
+vnoremap <PageUp> <nop>
+vnoremap <PageDown> <nop>
 
 " C/C++ indentation
 autocmd FileType c setlocal shiftwidth=2 tabstop=2 cindent
