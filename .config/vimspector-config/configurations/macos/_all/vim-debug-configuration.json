@@ -1,0 +1,29 @@
+{
+    "configurations": {
+        "CodeLLDB C++": {
+            // :VimspectorInstall CodeLLDB
+            "adapter": "CodeLLDB",
+            "breakpoints": {
+                "exception": {
+                    "cpp_throw": "Y",
+                    "cpp_catch": "N"
+                }
+            },
+            "variables": {
+                "BUILDME": {
+                    "shell": ["/bin/bash", "-c", "clang++ -o dbg -g -std=c++17 *.cpp"]
+                },
+                "arch": {
+                    "shell": "uname -m"
+                }
+            },
+            "configuration": {
+                "cwd": "${cwd}",
+                "request": "launch",
+                "program": "${cwd}/dbg",
+                "MIMode": "lldb"
+            },
+            "targetArchitecture": "${arch}"
+        }
+    }
+}

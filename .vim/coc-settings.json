@@ -6,7 +6,7 @@
             "filetypes": ["ocaml", "reason"]
         },
         "sourcekit-lsp": {
-          "filetypes": ["swift", "c"],
+          "filetypes": ["swift", "c", "cpp"],
           "command": "sourcekit-lsp"
         }
     },

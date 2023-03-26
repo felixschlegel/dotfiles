@@ -6,3 +6,14 @@
 !/.config/karabiner
 !/.config/alacritty
 !/.config/fish
+
+# Only track /.config/vimspector-config/configurations/macos/_all/vim-debug-configuration.json
+!/.config/vimspector-config
+/.config/vimspector-config/*
+!/.config/vimspector-config/configurations
+/.config/vimspector-config/configurations/*
+!/.config/vimspector-config/configurations/macos
+/.config/vimspector-config/configurations/macos/*
+!/.config/vimspector-config/configurations/macos/_all
+/.config/vimspector-config/configurations/macos/_all/*
+!/.config/vimspector-config/configurations/macos/_all/vim-debug-configuration.json

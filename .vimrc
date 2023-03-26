@@ -22,6 +22,9 @@ Plugin 'vim-airline/vim-airline-themes'
 " vim-gitgutter to show changes in sidebar
 Plugin 'airblade/vim-gitgutter'
 
+" vimspector graphical debugger
+Plugin 'puremourning/vimspector'
+
 " vim-signature (marks in sidebar)
 Bundle "kshenoy/vim-signature"
 
@@ -130,6 +133,18 @@ nmap <silent> <C-]> <Plug>(coc-definition)
 nmap <silent> gD <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " See :help coc-key-mappings@en for more
+
+" puremourning/vimspector
+nnoremap <leader>dd :call vimspector#Launch()<CR>
+nnoremap <leader>de :call vimspector#Reset()<CR>
+nnoremap <leader>dc :call vimspector#Continue()<CR>
+nnoremap <leader>dt :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <leader>dT :call vimspector#ClearBreakpoints()<CR>
+nmap <leader>dk <Plug>VimspectorRestart
+nmap <leader>dh <Plug>VimspectorStepOut
+nmap <leader>dl <Plug>VimspectorStepInto
+nmap <leader>dj <Plug>VimspectorStepOver
+let g:vimspector_base_dir = expand("$HOME/.config/vimspector-config")
 
 " custom key mappings
 nnoremap <C-t> :NERDTreeToggle<CR>
