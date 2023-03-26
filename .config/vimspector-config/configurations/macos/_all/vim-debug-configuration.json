@@ -24,6 +24,53 @@
                 "MIMode": "lldb"
             },
             "targetArchitecture": "${arch}"
+        },
+        "CodeLLDB Swift Test": {
+            "variables": {
+                "BUILDME": {
+                    "shell": ["/bin/bash", "-c", "swift build --build-tests --verbose"]
+                },
+                "xctestPath": {
+                    "shell": ["/bin/bash", "-c", "echo $(xcode-select -p)/usr/bin"]
+                },
+                "xcodeLLDBPath": {
+                    "shell": ["/bin/bash", "-c", "xcrun -f lldb"]
+                },
+                "swiftPackageName": {
+                    "shell": ["/bin/bash", "-c", "swift package describe --type json | python3 -c 'import json,sys;obj=json.load(sys.stdin);print(obj[\"name\"])'"]
+                },
+                "arch": {
+                    "shell": "uname -m"
+                },
+                "buildDirectory": ".build"
+            },
+            // Use custom adapter, see:
+            // https://github.com/vadimcn/codelldb/wiki/Swift
+            "adapter": {
+                "extends": "CodeLLDB",
+                "command": [
+                    "${gadgetDir}/CodeLLDB/adapter/codelldb",
+                    "--port",  "${unusedLocalPort}",
+                    "--liblldb", "${xcodeLLDBPath}"
+                ]
+            },
+            "breakpoints": {
+                "exception": {
+                    "cpp_throw": "Y",
+                    "cpp_catch": "N"
+                }
+            },
+            "configuration": {
+                "type": "lldb",
+                "request": "launch",
+                "filetypes": ["swift"],
+                "name": "Test ${swiftPackageName}",
+                "program": "${xctestPath}/xctest",
+                "args": ["${buildDirectory}/debug/${swiftPackageName}PackageTests.xctest"],
+                "cwd": "${cwd}",
+                "MIMode": "lldb"
+            },
+            "targetArchitecture": "${arch}"
         }
     }
 }
