@@ -1,45 +1,9 @@
-" Required template code for Vundle
-set shell=/bin/bash
-set nocompatible              " be iMproved, required
-filetype off                  " required
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" Vundle itself is managed by Vundle
-Plugin 'VundleVim/Vundle.vim'
-
-" nerdtree
-Plugin 'preservim/nerdtree'
-
-" vim-markdown
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-
-"vim-airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-
-" vim-gitgutter to show changes in sidebar
-Plugin 'airblade/vim-gitgutter'
-
-" vimspector graphical debugger
-Plugin 'puremourning/vimspector'
-
-" vim-signature (marks in sidebar)
-Bundle "kshenoy/vim-signature"
-
-call vundle#end()
-
 " vimplug
 call plug#begin()
 
 " fzf fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
-" goyo plugin for writing
-" Issue: colorcolumn and gitgutter color overwritten when exiting goyo
-Plug 'junegunn/goyo.vim'
 
 " vim-fugitive (required to show current git branch in vim-airline)
 Plug 'tpope/vim-fugitive'
@@ -58,8 +22,29 @@ Plug 'tpope/vim-repeat'
 " comment out lines with ease
 Plug 'tpope/vim-commentary'
 
+" nerdtree
+Plug 'preservim/nerdtree'
+
+" vim-markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
+"vim-airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" vim-gitgutter to show changes in sidebar
+Plug 'airblade/vim-gitgutter'
+
+" vimspector graphical debugger
+Plug 'puremourning/vimspector'
+
+" vim-signature (marks in sidebar)
+Plug 'kshenoy/vim-signature'
+
 call plug#end()
 
+set nocompatible " be iMproved
 filetype plugin indent on
 syntax on
 
@@ -150,7 +135,6 @@ let g:vimspector_base_dir = expand("$HOME/.config/vimspector-config")
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 nnoremap <C-p> :Files<CR>
-nnoremap <C-g> :Goyo <CR>
 nnoremap <C-h> :bprev<CR>
 nnoremap <C-l> :bn<CR>
 nnoremap <C-q> :bd<CR>
