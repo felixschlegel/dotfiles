@@ -42,6 +42,9 @@ Plug 'puremourning/vimspector'
 " vim-signature (marks in sidebar)
 Plug 'kshenoy/vim-signature'
 
+" context.vim (sticky headers)
+Plug 'wellle/context.vim'
+
 call plug#end()
 
 set nocompatible " be iMproved
@@ -56,7 +59,7 @@ set number relativenumber " Show relative line numbers
 set nu rnu " necessary for hybrid line numbers
 set tabstop=4 " Change Tab size from 8 to 4
 set shiftwidth=4
-set expandtab
+set expandtab " replace tabs with appropiate num of spaces
 set incsearch " Search while typing
 set nofoldenable " disable folding
 set visualbell " disable audio bell
