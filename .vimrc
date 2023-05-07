@@ -168,16 +168,16 @@ set completeopt=longest,menuone,noinsert
 " select popup item on enter
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " popup navigation
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
+inoremap <expr> <C-j> coc#pum#visible() ? coc#pum#next(1) : "\<C-j>"
+inoremap <expr> <C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-k>"
 " keep match highlighted while typing
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
     \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 " Map :W to :w
-command WQ wq
-command Wq wq
-command W w
+command! WQ wq
+command! Wq wq
+command! W w
 
 " Disable arrow keys
 nnoremap <Left> <nop>
