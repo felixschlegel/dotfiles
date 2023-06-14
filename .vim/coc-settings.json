@@ -11,5 +11,6 @@
         }
     },
     "coc.preferences.diagnostic.displayByAle": true,
-    "suggest.noselect": false
+    "suggest.noselect": false,
+    "inlayHint.enable": false
 }
