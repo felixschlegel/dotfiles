@@ -120,6 +120,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> <C-]> <Plug>(coc-definition)
 nmap <silent> gD <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gy <Plug>(coc-type-definition)
 " See :help coc-key-mappings@en for more
 
 " puremourning/vimspector
@@ -161,6 +162,9 @@ noremap <C-i> <C-i>zz
 
 " keep cursor centered when jumping to mark
 map <expr> M printf('`%c zz', getchar())
+
+" keep cursor centered when jumping to line
+cnoremap <expr> <CR> (getcmdtype() == ":" && getcmdline() =~ '\d\+') ? "<CR>zz" : "<CR>"
 
 " omnicomplete configuration
 " select longest common text
