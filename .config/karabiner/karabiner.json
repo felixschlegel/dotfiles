@@ -218,7 +218,7 @@
                                         "bundle_identifiers": [
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
-                                            "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "company.thebrowser.Browser",
                                             "com.jetbrains.intellij"
                                         ]
@@ -249,7 +249,7 @@
                                         "bundle_identifiers": [
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
-                                            "^io\\.alacritty$"
+                                            "^org\\.alacritty$"
                                         ]
                                     }
                                 ]
@@ -278,7 +278,7 @@
                                         "bundle_identifiers": [
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
-                                            "^io\\.alacritty$"
+                                            "^org\\.alacritty$"
                                         ]
                                     }
                                 ]
@@ -307,7 +307,7 @@
                                         "bundle_identifiers": [
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
-                                            "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "company.thebrowser.Browser",
                                             "com.jetbrains.intellij"
                                         ]
