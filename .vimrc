@@ -62,7 +62,9 @@ set shiftwidth=4
 set expandtab " replace tabs with appropiate num of spaces
 set incsearch " Search while typing
 set nofoldenable " disable folding
-set visualbell " disable audio bell
+" disable bell
+set visualbell
+set t_vb=
 set linebreak " wrap lines based on words
 
 set colorcolumn=120 " vertical column
