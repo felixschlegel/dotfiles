@@ -5,6 +5,8 @@
 !/.config/karabiner
 !/.config/alacritty
 !/.config/fish
+!/.config/nvim
+.config/nvim/plugin/packer_compiled.lua
 
 # Only track /.config/vimspector-config/configurations/macos/_all/vim-debug-configuration.json
 !/.config/vimspector-config
