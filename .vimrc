@@ -62,7 +62,9 @@ set shiftwidth=4
 set expandtab " replace tabs with appropiate num of spaces
 set incsearch " Search while typing
 set nofoldenable " disable folding
-set visualbell " disable audio bell
+" disable bell
+set visualbell
+set t_vb=
 set linebreak " wrap lines based on words
 
 set colorcolumn=120 " vertical column
@@ -120,6 +122,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> <C-]> <Plug>(coc-definition)
 nmap <silent> gD <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gy <Plug>(coc-type-definition)
 " See :help coc-key-mappings@en for more
 
 " puremourning/vimspector
@@ -162,22 +165,25 @@ noremap <C-i> <C-i>zz
 " keep cursor centered when jumping to mark
 map <expr> M printf('`%c zz', getchar())
 
+" keep cursor centered when jumping to line
+cnoremap <expr> <CR> (getcmdtype() == ":" && getcmdline() =~ '\d\+') ? "<CR>zz" : "<CR>"
+
 " omnicomplete configuration
 " select longest common text
 set completeopt=longest,menuone,noinsert
 " select popup item on enter
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " popup navigation
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
+inoremap <expr> <C-j> coc#pum#visible() ? coc#pum#next(1) : "\<C-j>"
+inoremap <expr> <C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-k>"
 " keep match highlighted while typing
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
     \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 " Map :W to :w
-command WQ wq
-command Wq wq
-command W w
+command! WQ wq
+command! Wq wq
+command! W w
 
 " Disable arrow keys
 nnoremap <Left> <nop>
