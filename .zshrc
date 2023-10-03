@@ -16,6 +16,7 @@ export PATH='/Users/Felix/.opam/default/bin:/usr/local/bin:/opt/homebrew/bin/:/u
 export PATH="/opt/homebrew/bin/ruby:$PATH"
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="$PATH:$HOME/.rvm/bin"
 export JAVA_HOME="$(/usr/libexec/java_home -V)"
 
 # show git branch in terminal prompt (https://gist.github.com/reinvanoyen/05bcfe95ca9cb5041a4eafd29309ff29)
@@ -33,6 +34,12 @@ export PROMPT='${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${CO
 # Enable git branch auto completion
 autoload -Uz compinit && compinit
 
+# Share history between sessions
+setopt share_history
+
+# Cycle through incremental history-based suggestions
+bindkey -v "^J" history-beginning-search-backward
+bindkey -v "^K" history-beginning-search-forward
+
 # vim mode
 bindkey -v
-
