@@ -213,3 +213,5 @@ vnoremap <PageDown> <nop>
 " C/C++ indentation
 autocmd FileType c setlocal shiftwidth=2 tabstop=2 cindent
 autocmd FileType cpp setlocal shiftwidth=2 tabstop=2 cindent
+autocmd Filetype typescript setlocal shiftwidth=2 tabstop=2 cindent
+autocmd Filetype javascript setlocal shiftwidth=2 tabstop=2 cindent
