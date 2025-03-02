@@ -45,6 +45,9 @@ Plug 'kshenoy/vim-signature'
 " context.vim (sticky headers)
 Plug 'wellle/context.vim'
 
+" copilot vim
+Plug 'github/copilot.vim'
+
 call plug#end()
 
 set nocompatible " be iMproved
