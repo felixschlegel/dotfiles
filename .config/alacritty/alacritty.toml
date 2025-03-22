@@ -1,0 +1,49 @@
+[colors.bright]
+black = "#575656"
+blue = "#82AAFF"
+cyan = "#7fdbca"
+green = "#22da6e"
+magenta = "#C792EA"
+red = "#EF5350"
+white = "#ffffff"
+yellow = "#ffeb95"
+
+[colors.normal]
+black = "#011627"
+blue = "#82AAFF"
+cyan = "#21c7a8"
+green = "#22da6e"
+magenta = "#C792EA"
+red = "#EF5350"
+white = "#ffffff"
+yellow = "#c5e478"
+
+[colors.primary]
+background = "#000000"
+foreground = "#d6deeb"
+
+[cursor.style]
+blinking = "Always"
+shape = "Block"
+
+[font]
+size = 12.0
+
+[[keyboard.bindings]]
+chars = "\u0015"
+key = "Back"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001F"
+key = "Slash"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0011"
+key = "Q"
+mods = "Control"
+
+[window]
+decorations = "buttonless"
+dynamic_padding = true
