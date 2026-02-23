@@ -1,0 +1,25 @@
+{
+  "skipDangerousModePermissionPrompt": true,
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CWD=$(echo \"$CLAUDE_HOOK_INPUT\" | jq -r '.cwd // empty'); FOLDER=$(basename \"${CWD:-$PWD}\") && osascript -e \"display notification \\\"Waiting for input\\\" with title \\\"Claude Code — $FOLDER\\\"\" && say \"Claude needs input in $FOLDER\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CWD=$(echo \"$CLAUDE_HOOK_INPUT\" | jq -r '.cwd // empty'); FOLDER=$(basename \"${CWD:-$PWD}\") && osascript -e \"display notification \\\"Claude is done\\\" with title \\\"Claude Code — $FOLDER\\\"\" && say \"Claude is done in $FOLDER\""
+          }
+        ]
+      }
+    ]
+  }
+}

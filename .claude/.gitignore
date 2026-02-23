@@ -1,0 +1,16 @@
+backups/
+cache/
+debug/
+file-history/
+history.jsonl
+mcp-needs-auth-cache.json
+paste-cache/
+plans/
+projects/
+session-env/
+shell-snapshots/
+stats-cache.json
+statsig/
+tasks/
+telemetry/
+todos/
