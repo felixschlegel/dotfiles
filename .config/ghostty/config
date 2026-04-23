@@ -1,0 +1,17 @@
+theme = Builtin Dark
+
+# Cursor
+cursor-style = block
+cursor-style-blink = true
+
+# Font
+font-size = 12
+
+# Window
+macos-titlebar-style = hidden
+window-padding-balance = true
+
+# Keybindings (match alacritty)
+keybind = super+backspace=text:\x15
+keybind = ctrl+slash=text:\x1f
+keybind = ctrl+q=text:\x11
