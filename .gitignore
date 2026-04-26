@@ -6,8 +6,16 @@
 !/.config/karabiner
 !/.config/alacritty
 !/.config/fish
+!/.config/ghostty
 !/.config/nvim
 .config/nvim/plugin/packer_compiled.lua
+
+# Only track selected Codex config files
+/.codex/*
+!/.codex/
+!/.codex/config.toml
+!/.codex/hooks/
+!/.codex/hooks/notify.sh
 
 # Only track /.config/vimspector-config/configurations/macos/_all/vim-debug-configuration.json
 !/.config/vimspector-config

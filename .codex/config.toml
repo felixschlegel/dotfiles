@@ -1,0 +1,40 @@
+personality = "pragmatic"
+model = "gpt-5.5"
+model_reasoning_effort = "xhigh"
+service_tier = "fast"
+
+[features]
+codex_hooks = true
+
+[[hooks.PermissionRequest]]
+[[hooks.PermissionRequest.hooks]]
+type = "command"
+command = "sh /Users/FelixSchlegel/.codex/hooks/notify.sh"
+timeout = 10
+
+[[hooks.Stop]]
+[[hooks.Stop.hooks]]
+type = "command"
+command = "sh /Users/FelixSchlegel/.codex/hooks/notify.sh"
+timeout = 10
+
+[projects."/Users/FelixSchlegel/Interaction/poke"]
+trust_level = "trusted"
+
+[projects."/Users/FelixSchlegel/Interaction/poke2"]
+trust_level = "trusted"
+
+[projects."/Users/FelixSchlegel/Interaction/poke1"]
+trust_level = "trusted"
+
+[projects."/Users/FelixSchlegel/dotfiles"]
+trust_level = "trusted"
+
+[plugins."github@openai-curated"]
+enabled = true
+
+[notice.model_migrations]
+"gpt-5.3-codex" = "gpt-5.4"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
